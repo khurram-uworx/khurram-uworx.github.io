@@ -1,7 +1,12 @@
 ---
-layout: page
-published: false
+title: "Base and Instruct Versions of LLMs"
+date: 2025-06-01
+comments: true
+tags:
+- GenAI
 ---
+
+Lets explores the key differences between the Base and Instruct versions of large language models, focusing on Qwen and Llama. It compares their training objectives, capabilities, and suitability for various tasks. The analysis highlights how instruction tuning impacts performance and usability in real-world applications.
 
 # **Base and Instruct Versions of Large Language Models: A Comparative Analysis of Qwen and Llama**
 
