@@ -1,5 +1,10 @@
 ---
-published: false
+title: "Airflow: Sprint Health"
+date: 2025-07-11
+tags:
+- "Data Engineering"
+- Scrum
+comments: true
 ---
 
 Apache Airflow has gained significant popularity in the data engineering and workflow automation space due to a combination of powerful features, flexibility, and strong community support. Below are the key reasons why Apache Airflow stands out as a preferred choice for orchestrating workflows:

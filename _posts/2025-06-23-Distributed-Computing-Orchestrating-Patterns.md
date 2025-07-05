@@ -2,11 +2,13 @@
 title: "Distributed Computing Orchestrating Patterns"
 date: 2025-06-23
 tags:
+- DDD
 - "Distributed Computing"
+comments: true
 ---
 
 
-Patterns for orchestrating messaging and reliability in distributed systems have matured and gained formal recognition. Lets take two examples to understand their implementation using RabbitMQ a famous Message Broker.
+Patterns for orchestrating messaging and reliability in distributed systems have matured and gained formal recognition. Lets understand and see their implementations using RabbitMQ a famous Message Broker.
 
 ---
 

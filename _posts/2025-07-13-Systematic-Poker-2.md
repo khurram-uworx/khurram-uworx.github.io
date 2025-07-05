@@ -1,5 +1,10 @@
 ---
-published: false
+title: "Systematic Poker - II"
+date: 2025-07-13
+tags:
+- ML
+- "Scrum"
+comments: true
 ---
 
 ### Systematic Refinement Process for Jira Story Point Prediction  
