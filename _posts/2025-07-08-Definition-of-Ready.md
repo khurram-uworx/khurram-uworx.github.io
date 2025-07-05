@@ -1,5 +1,9 @@
 ---
-published: false
+title: "DoR: Testing Scenarios"
+date: 2025-07-08
+tags:
+- Scrum
+comments: true
 ---
 
 Including testing scenarios in a ticket's Definition of Ready (DoR) is **highly important** for ensuring quality, clarity, and efficiency in the development process. Here's why:

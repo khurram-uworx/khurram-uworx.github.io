@@ -1,6 +1,7 @@
 ---
 title: "Inference Infrastructure"
 date: 2025-07-04
+comments: true
 tags:
 - GenAI
 ---
@@ -741,12 +742,12 @@ You can deploy any of these on a rented GPU VM and your app hits the endpoint ex
 Start with **Hugging Face Inference Endpoints** for speed and simplicity, pointing your `base_url` there with minimal changes.
 If you want cloud infra flexibility, **Modal + vLLM** is a solid next step. For more hands-on control, **OpenLLM / BentoML** is elegant.
 
-[1]: https://huggingface.co/blog/llama3?utm_source=chatgpt.com "Welcome Llama 3 - Meta's new open LLM - Hugging Face"
-[2]: https://github.com/ggml-org/llama.cpp/discussions/795?utm_source=chatgpt.com "An OpenAI Compatible Web Server for llama.cpp #795 - GitHub"
-[3]: https://cloud.google.com/vertex-ai/generative-ai/docs/migrate/openai/overview?utm_source=chatgpt.com "Using OpenAI libraries with Vertex AI - Google Cloud"
-[4]: https://modal.com/docs/examples/vllm_inference?utm_source=chatgpt.com "Run OpenAI-compatible LLM inference with LLaMA 3.1-8B and vLLM"
-[5]: https://github.com/bentoml/OpenLLM?utm_source=chatgpt.com "bentoml/OpenLLM: Run any open-source LLMs, such as ... - GitHub"
-[6]: https://github.com/LlamaEdge/LlamaEdge?utm_source=chatgpt.com "LlamaEdge/LlamaEdge: The easiest & fastest way to run ... - GitHub"
+[1]: https://huggingface.co/blog/llama3 "Welcome Llama 3 - Meta's new open LLM - Hugging Face"
+[2]: https://github.com/ggml-org/llama.cpp/discussions/795 "An OpenAI Compatible Web Server for llama.cpp #795 - GitHub"
+[3]: https://cloud.google.com/vertex-ai/generative-ai/docs/migrate/openai/overview "Using OpenAI libraries with Vertex AI - Google Cloud"
+[4]: https://modal.com/docs/examples/vllm_inference "Run OpenAI-compatible LLM inference with LLaMA 3.1-8B and vLLM"
+[5]: https://github.com/bentoml/OpenLLM "bentoml/OpenLLM: Run any open-source LLMs, such as ... - GitHub"
+[6]: https://github.com/LlamaEdge/LlamaEdge "LlamaEdge/LlamaEdge: The easiest & fastest way to run ... - GitHub"
 
 ## **🌐 OpenAI-compatible Inference Services**
 
@@ -816,11 +817,11 @@ Here are several additional **OpenAI-compatible inference services** you can try
 
 ---
 
-[1]: https://apidog.com/blog/free-open-source-llm-apis/?utm_source=chatgpt.com "30+ Free and Open Source LLM APIs for Developers"
-[2]: https://www.reddit.com/r/LocalLLaMA/comments/1dyzopq?utm_source=chatgpt.com "Which hosting provider for open source LLMs do you use?"
-[3]: https://www.reddit.com/r/LocalLLaMA/comments/1hitl7x?utm_source=chatgpt.com "Any cloud providers for the new Llama 3.3?"
-[4]: https://www.scaleway.com/en/docs/generative-apis/faq/?utm_source=chatgpt.com "Generative APIs | Scaleway Documentation"
-[5]: https://www.reddit.com/r/LocalLLaMA/comments/1caal2v?utm_source=chatgpt.com "Llama 3 models for free without paying? What's possible?"
-[6]: https://inference.net/content/llm-platforms?utm_source=chatgpt.com "Inference.net | Llm Platforms"
-[7]: https://www.reddit.com/r/googlecloud/comments/1ei7s5i?utm_source=chatgpt.com "Chat with all LLMs hosted on Google Cloud Vertex AI using the OpenAI API format"
-[8]: https://www.reddit.com/r/LocalLLaMA/comments/1cmyno2?utm_source=chatgpt.com "Is there an opposite of groq? Super cheap but very slow LLM API?"
+[1]: https://apidog.com/blog/free-open-source-llm-apis/ "30+ Free and Open Source LLM APIs for Developers"
+[2]: https://www.reddit.com/r/LocalLLaMA/comments/1dyzopq "Which hosting provider for open source LLMs do you use?"
+[3]: https://www.reddit.com/r/LocalLLaMA/comments/1hitl7x "Any cloud providers for the new Llama 3.3?"
+[4]: https://www.scaleway.com/en/docs/generative-apis/faq/ "Generative APIs | Scaleway Documentation"
+[5]: https://www.reddit.com/r/LocalLLaMA/comments/1caal2v "Llama 3 models for free without paying? What's possible?"
+[6]: https://inference.net/content/llm-platforms "Inference.net | Llm Platforms"
+[7]: https://www.reddit.com/r/googlecloud/comments/1ei7s5i "Chat with all LLMs hosted on Google Cloud Vertex AI using the OpenAI API format"
+[8]: https://www.reddit.com/r/LocalLLaMA/comments/1cmyno2 "Is there an opposite of groq? Super cheap but very slow LLM API?"

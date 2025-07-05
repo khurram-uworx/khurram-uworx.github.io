@@ -233,4 +233,4 @@ if qwen_json:
 
 By implementing this pipeline, you can significantly improve the **reliability** and **consistency** of your generative AI applications.
 
-Continue to [Base and Instruct Versions of Large Language Models: A Comparative Analysis of Qwen and Llama](/llm-researches/instruct.md)
+Continue to [Base and Instruct Versions of Large Language Models: A Comparative Analysis of Qwen and Llama](/2025/06/03/Instruct-Models-2.html)
