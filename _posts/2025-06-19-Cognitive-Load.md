@@ -35,6 +35,15 @@ CLT divides cognitive load into three types:
   * Reading poorly formatted, inconsistent, or overly abstracted code.
   * Struggling with bad documentation or unclear variable names.
 
+**🚨 Imposed Extraneous Cognitive Load – something we all silently suffer from**
+
+It's not always the code that's hard – sometimes it's everything around it.
+- Git repos with tons of branches, unclear naming, and a non-standard default branch name
+- PR overload – dozens open at once, many stale, unclear reviewers
+- Jira chaos – multiple boards, too many task types, uncategorized items, bloated backlog, and “in progress” that’s just a black hole.
+
+None of these are technically hard problems, but they drain attention, increase context switching, and reduce flow
+
 ---
 
 ### 3. **Germane Cognitive Load**

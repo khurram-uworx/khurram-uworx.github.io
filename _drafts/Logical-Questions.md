@@ -1,6 +1,38 @@
 ---
-published: false
----
+
+## published: false
+
+## Coding
+
+### Easy
+
+* https://leetcode.com/problems/two-sum/
+* https://leetcode.com/problems/valid-parentheses/description/
+
+  * https://leetcode.com/problems/longest-common-prefix/description/
+
+### Medium
+
+* https://leetcode.com/problems/longest-substring-without-repeating-characters/
+* https://leetcode.com/problems/merge-intervals
+
+### Hard
+
+* https://leetcode.com/problems/median-of-two-sorted-arrays/
+* https://leetcode.com/problems/largest-rectangle-in-histogram
+
+## Analysis/Design
+
+* https://www.geeksforgeeks.org/aptitude/puzzle-6-monty-hall-problem/
+* https://www.geeksforgeeks.org/aptitude/puzzle-2-find-ages-of-daughters/
+
+
+
+* https://puzzles.nigelcoldwell.co.uk/eightyeight.htm
+
+
+
+
 
 Here’s a **clean, organized Q\&A format** with **problem description**, **solution**, **key insight**, and **answer** — perfect for interviews or assessments.
 
@@ -8,8 +40,14 @@ Here’s a **clean, organized Q\&A format** with **problem description**, **solu
 
 ### **1. The Light Switches**
 
+
+
 **Question**:
+
+
 You're outside a room with **3 switches**. One of them controls a **light bulb inside the room**, and the other two do nothing. You can toggle the switches however you want, but you can **enter the room only once**. How do you determine which switch controls the bulb?
+
+
 
 **Answer**:
 
@@ -37,6 +75,7 @@ You have **12 identical-looking balls**, but one is either **heavier or lighter*
 
   * If equal → odd ball is in the remaining 4.
   * If not → odd is in heavier or lighter side (but you don't know which yet).
+
 * Continue breaking down with conditional steps (3 vs 3, then 1 vs 1).
 
 **Key Insight**: Must account for **both heavier and lighter** possibilities with every decision.
@@ -50,11 +89,11 @@ Four people need to cross a bridge at night. They have one flashlight and the br
 
 **Answer**:
 
-1. 1 & 2 cross → 2 min
+1. 1 \& 2 cross → 2 min
 2. 1 returns → 1 min
-3. 5 & 10 cross → 10 min
+3. 5 \& 10 cross → 10 min
 4. 2 returns → 2 min
-5. 1 & 2 cross again → 2 min
+5. 1 \& 2 cross again → 2 min
    **Total**: **17 minutes**
 
 **Key Insight**: **Minimize slow crossings and fast returns**.
@@ -120,3 +159,4 @@ You have **8 coins**. One is a counterfeit and is either **heavier or lighter**.
   * If unequal → choose 2 from the heavier/lighter group and weigh again to identify the fake and whether it’s heavy or light.
 
 **Key Insight**: Plan weighings to **detect both identity and weight difference** in minimum steps.
+
