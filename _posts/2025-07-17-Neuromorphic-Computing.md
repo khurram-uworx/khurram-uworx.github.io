@@ -1,5 +1,10 @@
 ---
-published: false
+title: "Neuromorphic Computing"
+date: 2025-07-17
+tags:
+- IoT
+- GenAI
+comments: true
 ---
 
 **Neuromorphic Computing** is an approach to computing that mimics how the human brain works, in both hardware and software. Instead of relying on the traditional von Neumann architecture (with separate CPU and memory), neuromorphic systems are designed with components that act like biological neurons and synapses, enabling parallel, event-driven processing.
