@@ -1,8 +1,12 @@
 ---
-published: false
+title: "Encoders and Decoders in NLP"
+date: 2025-07-16
+tags:
+- GenAI
+comments: true
 ---
 
-Certainly. As a seasoned software engineer, you’re likely familiar with concepts like embeddings, attention mechanisms, and transformers, so I’ll go straight to the point with minimal abstraction.
+This article explores the concepts of **encoders** and **decoders** in Natural Language Processing (NLP), particularly within the context of Transformer architectures. It explains how encoders like BERT process input sequences to create contextual embeddings, while decoders like GPT generate text by predicting the next token based on previous context. The article also compares these components, discusses their roles in various NLP tasks, and provides a detailed look at the Transformer architecture, including self-attention mechanisms and practical examples.
 
 ---
 

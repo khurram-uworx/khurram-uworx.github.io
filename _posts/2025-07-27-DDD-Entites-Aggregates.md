@@ -1,10 +1,9 @@
 ---
 title: "DDD - Entities and Aggregates"
-date: 2025-07-19
+date: 2025-07-27
 tags:
 - DDD
 comments: true
-published: false
 ---
 
 In context of Domain Driven Design, Entities and Aggregate confuses lot of people. Let's unravel the knot:

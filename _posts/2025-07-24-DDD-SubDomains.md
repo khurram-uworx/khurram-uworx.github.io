@@ -1,6 +1,6 @@
 ---
 title: "DDD - Subdomains"
-date: 2025-07-16
+date: 2025-07-24
 tags:
 - DDD
 comments: true
