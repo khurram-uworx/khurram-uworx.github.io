@@ -1,6 +1,6 @@
 ---
 title: "DDD - Bounded Context"
-date: 2025-07-25
+date: 2025-07-26
 tags:
 - DDD
 comments: true

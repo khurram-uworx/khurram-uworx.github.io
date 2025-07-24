@@ -1,6 +1,6 @@
 ---
 title: "DDD - Context Map"
-date: 2025-07-26
+date: 2025-07-27
 tags:
 - DDD
 comments: true
@@ -159,12 +159,13 @@ Brilliant! Let's enrich our domain by introducing the **Returns & Refunds** subd
 - Treat it like code: use Git versioning, pull requests, and reviews.
 
 #### 🔄 4. **Keep It Updated During Scrum**
-| Scrum Artifact     | Role in Context Map Maintenance                                   |
-|--------------------|-------------------------------------------------------------------|
-| **Sprint Planning**| Revisit if new contexts or integrations are being introduced.     |
-| **Backlog Refinement**| Ensure domain events and context relationships are documented.  |
-| **Definition of Done**| Include “Context Map updated” for strategic stories.            |
-| **Retrospectives**| Use feedback to refine domain relationships and terminology.       |
+
+| Scrum Artifact        | Role in Context Map Maintenance                                   |
+|-----------------------|-------------------------------------------------------------------|
+| **Sprint Planning**   | Revisit if new contexts or integrations are being introduced.     |
+| **Backlog Refinement**| Ensure domain events and context relationships are documented.    |
+| **Definition of Done**| Include “Context Map updated” for strategic stories.              |
+| **Retrospectives**    | Use feedback to refine domain relationships and terminology.      |
 
 ---
 
