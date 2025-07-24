@@ -1,5 +1,5 @@
 ---
-title: "More Frontier Engineers "
+title: "More Frontier Engineers"
 date: 2025-07-23
 tags:
 - Engineering

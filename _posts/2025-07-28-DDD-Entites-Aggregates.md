@@ -1,6 +1,6 @@
 ---
 title: "DDD - Entities and Aggregates"
-date: 2025-07-27
+date: 2025-07-28
 tags:
 - DDD
 comments: true
