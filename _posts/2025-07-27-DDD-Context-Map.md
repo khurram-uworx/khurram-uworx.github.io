@@ -216,13 +216,14 @@ Here’s a simple markdown template you can use in your repo (`/docs/context-map
 
 ## 🔗 Relationships
 
-| Source Context       | Target Context        | Relationship Pattern     | Integration Style         |
+| Source Context       | Target Context        | Relationship Pattern      | Integration Style          |
 |----------------------|-----------------------|---------------------------|----------------------------|
 | Order Management     | Shipping & Logistics  | Published Language        | Domain Events              |
 | Order Management     | Payment Gateway       | Open Host Service         | REST API                   |
 | Shipping             | Returns & Refunds     | Customer/Supplier         | Domain Events              |
 | Returns & Refunds    | Payment Gateway       | Open Host Service         | REST API                   |
 | Inventory            | Order Management      | Anticorruption Layer      | Internal Adapter           |
+
 
 ## 📣 Domain Events
 
