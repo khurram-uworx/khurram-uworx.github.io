@@ -1,8 +1,12 @@
 ---
-published: false
-title: "Stochastic Process"
+title: "Stochastic Processes and Continuous-Time Variants"
+date: 2025-12-20
 tags:
-- ML
+    - Stochastic Processes
+    - Brownian Motion
+    - Continuous-Time Processes 
+comments: true
+
 ---
 
 A **stochastic process** is a mathematical object used to describe systems that evolve over time in a probabilistic manner. For a seasoned software engineer, you can think of it as a **function over time whose values are random variables**, rather than deterministic outcomes.
