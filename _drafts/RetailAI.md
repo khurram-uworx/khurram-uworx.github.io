@@ -1,8 +1,7 @@
-🧠 Idea Name (for pitch - can be changed)
+🧠 RetailAI: The Omnichannel Intelligence Hub
 -----------------------------------------
 
-RetailAI: The Omnichannel Intelligence Hub\
-Tagline: Transforming every interaction into insight, every visit into value.
+Transforming every interaction into insight, every visit into value.
 
 * * * * *
 

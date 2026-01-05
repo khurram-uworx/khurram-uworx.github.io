@@ -2,10 +2,6 @@
 published: false
 ---
 
-Great question, Khurram — and one that deserves a methodical answer. Since you're already well-versed in architectural patterns and DDD fundamentals, here's a **priority-based roadmap** that balances strategic clarity with tactical depth:
-
----
-
 ### 🧭 **Phase 1: Foundational Concepts**
 Start here to build a shared mental model and vocabulary.
 
