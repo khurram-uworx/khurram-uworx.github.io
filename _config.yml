@@ -2,8 +2,9 @@ remote_theme: jekyll/minima
 title: LLM Chats
 description: Sharing few random but cool LLM chats
 author: khurram-uworx
-google_analytics: G-M1W7S4H5C4
+# paginate: 20
 url: "https://khurram-uworx.github.io"
+google_analytics: G-M1W7S4H5C4
 disqus:
   shortname: llm-chats
 minima:
