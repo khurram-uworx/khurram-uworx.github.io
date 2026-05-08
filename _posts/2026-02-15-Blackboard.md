@@ -1,6 +1,7 @@
 ---
 title: "Blackboard Architecture: A Classic AI Model for Collaborative Problem Solving"
 date: 2026-02-15
+series: "Classic AI Concepts"
 tags:
   - AI
   - Architecture
@@ -259,3 +260,21 @@ Together, they embody the **key insight of blackboard architectures**: *many con
 [3]: https://www.copilotkit.ai/mcp-apps?utm_source=chatgpt.com "Using MCP Apps In Your Application | CopilotKit"
 [4]: https://www.marktechpost.com/2026/01/29/beyond-the-chatbox-generative-ui-ag-ui-and-the-stack-behind-agent-driven-interfaces/?utm_source=chatgpt.com "Beyond the Chatbox: Generative UI, AG-UI, and the Stack Behind Agent-Driven Interfaces - MarkTechPost"
 [5]: https://www.copilotkit.ai/ag-ui?utm_source=chatgpt.com "AG-UI Protocol | CopilotKit"
+
+{% if page.series %}
+  {% assign series_posts = site.posts | where: "series", page.series | sort: 'date' %}
+  <div class="series-nav">
+    <h3>More from {{ page.series }}</h3>
+    <ul>
+      {% for post in series_posts %}
+        <li>
+          {% if post.url == page.url %}
+            <strong>{{ post.title }} (Current)</strong>
+          {% else %}
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

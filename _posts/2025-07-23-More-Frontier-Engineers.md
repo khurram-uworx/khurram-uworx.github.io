@@ -1,6 +1,7 @@
 ---
 title: "More Frontier Engineers"
 date: 2025-07-23
+series: "Frontier Engineering"
 tags:
 - Engineering
 comments: true
@@ -261,3 +262,21 @@ Survival (and thriving) depends on moving **upstream** (strategy, frontier) or *
 
 We don't just need *more* engineers — we need engineers who can **redefine what the job even is**.
 That’s why Frontier Engineers matter now more than ever.
+
+{% if page.series %}
+  {% assign series_posts = site.posts | where: "series", page.series | sort: 'date' %}
+  <div class="series-nav">
+    <h3>More from {{ page.series }}</h3>
+    <ul>
+      {% for post in series_posts %}
+        <li>
+          {% if post.url == page.url %}
+            <strong>{{ post.title }} (Current)</strong>
+          {% else %}
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

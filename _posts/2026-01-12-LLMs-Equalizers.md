@@ -1,6 +1,7 @@
 ---
 title: "LLMs as Equalizers: Translating Ideas Across Ecosystems"
 date: 2026-01-12
+series: "Context Engineering"
 tags:
     - LLMs
     - software engineering

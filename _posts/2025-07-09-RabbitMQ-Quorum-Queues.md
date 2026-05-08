@@ -1,6 +1,7 @@
 ---
 title: "RabbitMQ Quorum Queues"
 date: 2025-07-09
+series: "Domain-Driven Design"
 tags:
 - DDD
 - "Distributed Computing"
@@ -123,3 +124,21 @@ Quorum queues are a modern queue type in RabbitMQ (introduced in version 3.8.0) 
    - Leader failures trigger automatic reelection
    - Network partitions may require manual intervention
    - Monitor disk space for WAL growth
+
+   {% if page.series %}
+  {% assign series_posts = site.posts | where: "series", page.series | sort: 'date' %}
+  <div class="series-nav">
+    <h3>More from {{ page.series }}</h3>
+    <ul>
+      {% for post in series_posts %}
+        <li>
+          {% if post.url == page.url %}
+            <strong>{{ post.title }} (Current)</strong>
+          {% else %}
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

@@ -1,6 +1,7 @@
 ---
 title: "ScrumUpdate Deep Dive"
 date: 2026-02-18
+series: "Classic AI Concepts"
 tags:
   - Blazor
   - AI
@@ -268,3 +269,21 @@ Key files:
 - **Jira Integration:** `src/ScrumUpdate.Web/Services/Atlassian/AtlassianOAuthService.cs`
 - **Tool Functions:** `src/ScrumUpdate.Web/Services/ScrumUpdateTools.cs`
 - **UI Component:** `src/ScrumUpdate.Web/Components/Pages/Chat/Chat.razor`
+
+{% if page.series %}
+  {% assign series_posts = site.posts | where: "series", page.series | sort: 'date' %}
+  <div class="series-nav">
+    <h3>More from {{ page.series }}</h3>
+    <ul>
+      {% for post in series_posts %}
+        <li>
+          {% if post.url == page.url %}
+            <strong>{{ post.title }} (Current)</strong>
+          {% else %}
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
