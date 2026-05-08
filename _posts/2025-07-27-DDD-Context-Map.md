@@ -1,6 +1,7 @@
 ---
 title: "DDD - Context Map"
 date: 2025-07-27
+series: "Domain-Driven Design"
 tags:
 - DDD
 comments: true
@@ -425,3 +426,21 @@ sales-system/
 - Assign a “Context Steward” for each Scrum team to keep things aligned and up-to-date.
 
 ---
+
+{% if page.series %}
+  {% assign series_posts = site.posts | where: "series", page.series | sort: 'date' %}
+  <div class="series-nav">
+    <h3>More from {{ page.series }}</h3>
+    <ul>
+      {% for post in series_posts %}
+        <li>
+          {% if post.url == page.url %}
+            <strong>{{ post.title }} (Current)</strong>
+          {% else %}
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

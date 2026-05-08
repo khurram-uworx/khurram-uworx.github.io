@@ -1,6 +1,7 @@
 ---
 title: "DDD as a Culture"
 date: 2025-06-22
+series: "Domain-Driven Design"
 tags:
 - DDD
 ---
@@ -102,3 +103,21 @@ Here's a well-rounded list of areas engineers typically get exposure to when pra
 ### 💡 Summary
 
 DDD isn't just about *how* to design — it's about *how to think*. It’s a **holistic approach** that encompasses technical architecture, software design, organizational alignment, and most importantly, problem understanding.
+
+{% if page.series %}
+  {% assign series_posts = site.posts | where: "series", page.series | sort: 'date' %}
+  <div class="series-nav">
+    <h3>More from {{ page.series }}</h3>
+    <ul>
+      {% for post in series_posts %}
+        <li>
+          {% if post.url == page.url %}
+            <strong>{{ post.title }} (Current)</strong>
+          {% else %}
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

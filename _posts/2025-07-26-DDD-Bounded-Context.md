@@ -1,6 +1,7 @@
 ---
 title: "DDD - Bounded Context"
 date: 2025-07-26
+series: "Domain-Driven Design"
 tags:
 - DDD
 comments: true
@@ -325,3 +326,21 @@ This diagram demonstrates one of the most **critical DDD insights**:
 * This avoids a **one-size-fits-all model**, which leads to **leaky abstractions**.
 * Each team can evolve their model independently.
 * It promotes clarity and autonomy—each context owns and defines its **ubiquitous language** precisely.
+
+{% if page.series %}
+  {% assign series_posts = site.posts | where: "series", page.series | sort: 'date' %}
+  <div class="series-nav">
+    <h3>More from {{ page.series }}</h3>
+    <ul>
+      {% for post in series_posts %}
+        <li>
+          {% if post.url == page.url %}
+            <strong>{{ post.title }} (Current)</strong>
+          {% else %}
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
