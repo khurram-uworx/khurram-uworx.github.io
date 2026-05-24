@@ -1,6 +1,8 @@
 ---
 title: "Generative AI Concepts"
 date: 2025-07-14
+series:
+  - "Context Engineering"
 tags:
 - GenAI
 comments: true
@@ -192,3 +194,23 @@ Once you're comfortable with attention and Transformers, you can explore:
 - **Multimodal Models**: Combine text, images, and other data types (e.g., CLIP, DALL·E).
 - **Self-Supervised Learning**: Learn how models like BERT and GPT are pre-trained on large datasets.
 - **Reinforcement Learning with Transformers**: Explore how Transformers are used in RL (e.g., Decision Transformers).
+
+{% if page.series %}
+{% for s in page.series %}
+{% assign series_posts = site.posts | where_exp: "post", "post.series contains s" | sort: 'date' %}
+<div class="series-nav">
+<h4>More from {{ s }}</h4>
+<ul>
+{% for post in series_posts %}
+<li>
+{% if post.url == page.url %}
+<strong>{{ post.title }} (Current)</strong>
+{% else %}
+<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+{% endif %}
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endfor %}
+{% endif %}

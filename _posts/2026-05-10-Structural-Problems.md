@@ -1,7 +1,8 @@
 ---
 title: "The Structural Problems"
 date: 2026-05-10
-series: "Frontier Engineering"
+series:
+  - "Frontier Engineering"
 tags:
     - software engineering
     - coding agents
@@ -101,19 +102,21 @@ The organizations that navigate this well will be the ones that used agents deli
 The ones that do not will discover, slowly and expensively, that they traded long-term resilience for short-term output metrics. And they will make that discovery at the worst possible time — when something critical breaks and nobody in the organization understands it well enough to fix it.
 
 {% if page.series %}
-  {% assign series_posts = site.posts | where: "series", page.series | sort: 'date' %}
-  <div class="series-nav">
-    <h3>More from {{ page.series }}</h3>
-    <ul>
-      {% for post in series_posts %}
-        <li>
-          {% if post.url == page.url %}
-            <strong>{{ post.title }} (Current)</strong>
-          {% else %}
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+{% for s in page.series %}
+{% assign series_posts = site.posts | where_exp: "post", "post.series contains s" | sort: 'date' %}
+<div class="series-nav">
+<h4>More from {{ s }}</h4>
+<ul>
+{% for post in series_posts %}
+<li>
+{% if post.url == page.url %}
+<strong>{{ post.title }} (Current)</strong>
+{% else %}
+<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+{% endif %}
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endfor %}
 {% endif %}

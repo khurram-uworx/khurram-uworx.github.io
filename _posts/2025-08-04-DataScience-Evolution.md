@@ -1,7 +1,8 @@
 ---
 title: "The Evolution of Data Science: From Frontier to Infrastructure and the Path Forward"
 date: 2025-08-04
-series: "Frontier Engineering"
+series:
+  - "Frontier Engineering"
 tags:
 - "Data Science"
 - "ML"
@@ -146,19 +147,21 @@ Now the real frontier is:
 Data science is still essential, but it's no longer exploratory frontier work for most industries — it's infrastructure. The frontier has moved further up the abstraction stack.
 
 {% if page.series %}
-  {% assign series_posts = site.posts | where: "series", page.series | sort: 'date' %}
-  <div class="series-nav">
-    <h3>More from {{ page.series }}</h3>
-    <ul>
-      {% for post in series_posts %}
-        <li>
-          {% if post.url == page.url %}
-            <strong>{{ post.title }} (Current)</strong>
-          {% else %}
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+{% for s in page.series %}
+{% assign series_posts = site.posts | where_exp: "post", "post.series contains s" | sort: 'date' %}
+<div class="series-nav">
+<h4>More from {{ s }}</h4>
+<ul>
+{% for post in series_posts %}
+<li>
+{% if post.url == page.url %}
+<strong>{{ post.title }} (Current)</strong>
+{% else %}
+<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+{% endif %}
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endfor %}
 {% endif %}

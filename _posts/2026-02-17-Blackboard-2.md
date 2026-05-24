@@ -1,7 +1,9 @@
 ---
 title: "From Theory to Practice: Implementing Blackboard Architecture in Modern Blazor Apps"
 date: 2026-02-17
-series: "Classic AI Concepts"
+series:
+  - "Classic AI Concepts"
+  - "Blackboard Architecture"	
 tags:
   - Blazor
   - AI
@@ -536,19 +538,21 @@ Blackboard architecture isn't just historical AI theory—it's a **powerful patt
 The next generation of enterprise apps might just be **conversational interfaces** built on **blackboard principles**—where AI, systems, and humans co-evolve a solution in a shared workspace.
 
 {% if page.series %}
-  {% assign series_posts = site.posts | where: "series", page.series | sort: 'date' %}
-  <div class="series-nav">
-    <h3>More from {{ page.series }}</h3>
-    <ul>
-      {% for post in series_posts %}
-        <li>
-          {% if post.url == page.url %}
-            <strong>{{ post.title }} (Current)</strong>
-          {% else %}
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+{% for s in page.series %}
+{% assign series_posts = site.posts | where_exp: "post", "post.series contains s" | sort: 'date' %}
+<div class="series-nav">
+<h4>More from {{ s }}</h4>
+<ul>
+{% for post in series_posts %}
+<li>
+{% if post.url == page.url %}
+<strong>{{ post.title }} (Current)</strong>
+{% else %}
+<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+{% endif %}
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endfor %}
 {% endif %}

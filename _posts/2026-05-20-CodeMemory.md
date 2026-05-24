@@ -1,7 +1,12 @@
 ---
 title: "Transform Repositories into Queryable Intelligence"
 date: 2026-05-20
-series: "Context Engineering"
+series:
+  - "Context Engineering"
+  - "LLMs as Equializers"
+  - "Memori"
+  - "Model Context Protocol"
+  - "Vectors and Tensors"
 tags:
   - MCP
   - Semantic Search
@@ -77,8 +82,8 @@ CodeMemory exposes repository intelligence through 11 MCP tools. Each returns st
 | Tool | What it gives you |
 |---|---|
 | `semantic_search` | Natural language code search (no grep needed) |
-| `trace_dependency` | What depends on what, upstream or downstream |
-| `impact_analysis` | What breaks if you change this symbol |
+| `trace_dependency` | Follow dependency chains: upstream (what this symbol calls) or downstream (what calls this symbol) |
+| `impact_analysis` | What breaks if you change this symbol — a focused downstream traversal with depth limits |
 | `get_architecture_overview` | Components, languages, file/symbol counts |
 | `get_edit_context` | Source + deps + tests — everything an agent needs to edit |
 | `get_component_clusters` | Logical groupings by inter-component coupling |
@@ -94,7 +99,7 @@ CodeMemory is MCP-native by design. No chat interface, no IDE plugin, no "AI for
 
 ## Try It Now — One Command, Any Machine
 
-- We only support Windows x64 for now, Linux/Mac support can be added
+- We ship native binaries for Windows x64 and Linux x64 (both under 50MB compressed). Mac support is straightforward — the only native dependency is TreeSitter, which targets all three platforms. It's a CI/CD matrix expansion.
 
 CodeMemory ships as a native binary via npm. No .NET SDK, no build step, no source clone. The binary is a self-contained .NET single-file publish — the npm package is just a thin wrapper that downloads the right binary for your platform on install.
 
@@ -145,7 +150,7 @@ A few design choices worth calling out that didn't fit above:
 
 - **SQL query engine** — `SqlParserCS` → LINQ expression trees over the vector store. Supports `SELECT`/`WHERE`/`ORDER BY`/`GROUP BY`/`HAVING`, CTEs, derived tables, aggregates, and vector search via `ORDER BY Similarity DESC`. On the ASP.NET path, queries route to EF Core for symbols/relationships and the vector store for chunks.
 - **Multi-language parsing** — Roslyn for C# (the actual compiler), Tree-sitter for TypeScript, JavaScript, and Java
-- **Plug-in embeddings** — `IEmbeddingGenerator<string, Embedding<float>>` from `Microsoft.Extensions.AI.Abstractions`. Default is Memori's n-gram hashing (offline, deterministic, no API keys). Swap to OpenAI, Ollama, or any provider via DI registration.
+- **Plug-in embeddings** — `IEmbeddingGenerator<string, Embedding<float>>` from `Microsoft.Extensions.AI.Abstractions`. Default is [Memori](https://github.com/khurram-uworx/Memori)'s n-gram hashing (offline, deterministic, no API keys, sub-millisecond per embedding). N-grams are surprisingly effective for code: variable names, function identifiers, and API surface tokens carry dense semantic signal that n-gram fingerprints capture well, often rivaling lightweight transformer embeddings for retrieval tasks. And the implementation is trivial — hash collisions don't break retrieval, they just group synonyms, which is exactly what you want in code search. Swap to OpenAI, Ollama, or any provider via DI registration. (Memori is our own NuGet — the dependency exists only because this logic shouldn't need reinventing.)
 - **Non-blocking by contract** — Indexing runs in the background. Tools return empty/partial results until `ping` reports `indexingCompleted: true`. This is the contract every agent must follow, and it's consistent across both STDIO and ASP.NET deployments.
 
 ## What It Enables
@@ -164,22 +169,26 @@ None of this requires the agent to have *seen* these files before. The memory is
 
 *CodeMemory is a local-first repository intelligence engine. It is not an IDE, a chat assistant, or a code generator. It is a persistent, queryable semantic memory layer for your coding agents.*
 
-*[GitHub](https://github.com/khurram-uworx/CodeMemory) — Apache-2.0 — .NET 10*
+*[GitHub](https://github.com/khurram-uworx/CodeMemory) — MIT — .NET 10*
+
+*We're actively building. Star the repo, open an issue, or pick up a "good first issue" — memory is better together.*
 
 {% if page.series %}
-  {% assign series_posts = site.posts | where: "series", page.series | sort: 'date' %}
-  <div class="series-nav">
-    <h3>More from {{ page.series }}</h3>
-    <ul>
-      {% for post in series_posts %}
-        <li>
-          {% if post.url == page.url %}
-            <strong>{{ post.title }} (Current)</strong>
-          {% else %}
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+{% for s in page.series %}
+{% assign series_posts = site.posts | where_exp: "post", "post.series contains s" | sort: 'date' %}
+<div class="series-nav">
+<h4>More from {{ s }}</h4>
+<ul>
+{% for post in series_posts %}
+<li>
+{% if post.url == page.url %}
+<strong>{{ post.title }} (Current)</strong>
+{% else %}
+<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+{% endif %}
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endfor %}
 {% endif %}

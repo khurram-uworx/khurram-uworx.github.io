@@ -1,6 +1,8 @@
 ---
 title: "Tensor Cores vs AVX"
 date: 2025-06-04
+series:
+  - "Vectors and Tensors"
 tags:
 - CPUs
 - GPUs
@@ -167,3 +169,22 @@ In .NET, the best path today to tap into advanced AI acceleration like Intel’s
 > - **ONNX Runtime + Execution Providers**
 > - **System.Runtime.Intrinsics (AVX/NEON/etc.)**
 > - **Native bindings for advanced use cases**
+{% if page.series %}
+{% for s in page.series %}
+{% assign series_posts = site.posts | where_exp: "post", "post.series contains s" | sort: 'date' %}
+<div class="series-nav">
+<h4>More from {{ s }}</h4>
+<ul>
+{% for post in series_posts %}
+<li>
+{% if post.url == page.url %}
+<strong>{{ post.title }} (Current)</strong>
+{% else %}
+<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+{% endif %}
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endfor %}
+{% endif %}

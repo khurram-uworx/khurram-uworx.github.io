@@ -1,6 +1,8 @@
 ---
 title: "Encoders and Decoders in NLP"
 date: 2025-07-16
+series:
+  - "Context Engineering"
 tags:
 - GenAI
 comments: true
@@ -1161,3 +1163,23 @@ So: keeping just **2 components** retains **93%** of all the variation. That’s
 | Eigenvalues         | Tell **how many components to keep**    |
 
 ---
+
+{% if page.series %}
+{% for s in page.series %}
+{% assign series_posts = site.posts | where_exp: "post", "post.series contains s" | sort: 'date' %}
+<div class="series-nav">
+<h4>More from {{ s }}</h4>
+<ul>
+{% for post in series_posts %}
+<li>
+{% if post.url == page.url %}
+<strong>{{ post.title }} (Current)</strong>
+{% else %}
+<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+{% endif %}
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endfor %}
+{% endif %}
