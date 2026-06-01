@@ -1,8 +1,6 @@
 ---
 title: "Generative AI Concepts"
 date: 2025-07-14
-series:
-  - "Context Engineering"
 tags:
 - GenAI
 comments: true

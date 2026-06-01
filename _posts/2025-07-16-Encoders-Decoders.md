@@ -1,8 +1,6 @@
 ---
 title: "Encoders and Decoders in NLP"
 date: 2025-07-16
-series:
-  - "Context Engineering"
 tags:
 - GenAI
 comments: true

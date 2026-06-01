@@ -1,4 +1,4 @@
 ---
 layout: home
-title: My Random LLM Chats
+title: Conversations, experiments, and engineering notes from the age of AI
 ---

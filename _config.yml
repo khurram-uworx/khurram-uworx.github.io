@@ -1,6 +1,6 @@
 remote_theme: jekyll/minima
-title: LLM Chats
-description: Sharing few random but cool LLM chats
+title: Conversations With Machines
+description: Conversations, experiments, and engineering notes from the age of AI
 author: khurram-uworx
 # paginate: 20
 url: "https://khurram-uworx.github.io"
