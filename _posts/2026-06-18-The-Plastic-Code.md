@@ -1,6 +1,8 @@
 ---
 title: "The Plastic Code"
 date: 2026-06-18
+series:
+  - "Frontier Engineering"
 tags:
   - AI
   - Software Engineering
@@ -37,6 +39,8 @@ No one in that room — not a single person — could explain how half the codeb
 ---
 
 ## The Plastic Code
+
+![Plastic Code](/assets/images/plastic-code.png)
 
 This is not technical debt.
 
