@@ -2,7 +2,7 @@
 title: "LLMs as Equalizers: Translating Ideas Across Ecosystems"
 date: 2026-01-12
 series:
-  - "Context Engineering"
+  - "Nivara"
   - "LLMs as Equializers"
 tags:
     - LLMs

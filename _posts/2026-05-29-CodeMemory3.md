@@ -3,7 +3,6 @@ title: "SQL, Extensibility, and the Democratization of Infrastructure"
 date: 2026-05-29
 series:
   - "Memori"
-  - "LLMs as Equializers"
 tags:
   - MCP
   - Semantic Search
